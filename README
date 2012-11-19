@@ -1,0 +1,39 @@
+TO INSTALL:
+
+    Clone scripts:
+        cd ~
+        git clone git@github.com:jiiijkkk/Cygwin_scripts.git
+        mv Cygwin_scripts sh
+    
+    Make shortcuts:
+        
+        Make a own bin folder:
+            cd ~
+            mkdir bin
+            
+            Then add the followed line in ~/.bashrc:
+            
+                export PATH=$PATH:~/bin
+            
+        Use Notepad++ as command "npp":
+            ln -s /cygdrive/(PATH YOU INSTALLING NOTEPAD++)/notepad++.exe ~/bin/npp
+        
+        Use "dir -al" as command "-ll" like in Ubuntu:
+            ln -s ~/sh/ll.sh ~/bin/ll
+        
+        use SSH server connector as "conn":
+            ln -s ~/sh/conn.sh ~/bin/conn
+
+To USE:
+    The config file is read line by line.
+    Make sure the format:
+        (Blank if this is not the first server infomation)
+        NAME
+        THE 1st PARAMETER of SSH
+        PASSWORD
+    
+    Command:
+        conn -h
+
+2012.11.15 UPDATES
+    Fix conn path to cygwin original path
